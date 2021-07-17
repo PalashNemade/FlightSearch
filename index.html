@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKY MATE</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <script src="./scripts/myscript.js"></script>
+
+  <body>
+    <div class="container">
+      <div class="container__search">
+        <form method="GET" action="#" class="container__search__form">
+          <span class="container__search_form--origin">
+            <label for="origin">Origin </label>
+            <input type="text" name="origin" id="origin" list="airports" class="text-origin" required />
+            <datalist id="airports">
+              <option value="Dallas">Dallas (DFW)</option>
+              <option value="New Jersey">New Jersey (EWR)</option>
+              <option value="SFO">San Francisco (SFO)</option>
+              <option value="Chicago">Chicago (ORD)</option>
+            </datalist>
+          </span>
+
+          <span class="container__search_form--destination">
+            <label for="destination">Destination </label>
+            <input type="text" name="destination" id="destination" list="airports" class="text-destination" required />
+            <datalist id="airports">
+              <option value="Dallas">Dallas (DFW)</option>
+              <option value="New Jersey">New Jersey (EWR)</option>
+              <option value="SFO">San Francisco (SFO)</option>
+              <option value="Chicago">Chicago (ORD)</option>
+            </datalist>
+          </span>
+
+          <br />
+
+          <span class="container__search_form--traveltype">
+            <label for="traveltype">Travel Type </label>
+            <select id="traveltype" class="traveltype" onchange="way();" required >
+              <option>One-Way/Return</option>
+              <option value="oneway">One Way</option>
+              <option value="return">Return</option>
+            </select>
+          </span>
+
+          <span class="container__search_form--startdate">
+            <lable for="startdate">Start Date </lable>
+            <input type="date" id="startdate" class="startdate" required />
+          </span>
+
+          <span class="container__search_form--returndate">
+            <label for="returndate">Return Date </lable>
+            <input type="date" id="returndate" class="returndate" required />
+          </span>
+
+          <br />
+
+          <span class="container__search_form--passengers">
+              <label for="passengers">Passengers </label>
+              <select id="passengers" onchange="passengers();" class="passengers">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+              </select>
+          </span>
+
+          <span class="container__search_form--buttonsearch">
+              <input type="button" value="Search" onclick="validate();" class="button-search"/>
+          </span>
+
+        </form>
+      </div>
+      <div class="container__result" id="result">Result</div>
+    </div>
+  </body>
+</html>

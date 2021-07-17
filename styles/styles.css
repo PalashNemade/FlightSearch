@@ -1,0 +1,68 @@
+body {
+  background: url("../assets/background-airplane.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.container__search {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 120px;
+  margin-right: 120px;
+  width: fit-content;
+  height: 200px;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 0.6;
+  color: antiquewhite;
+}
+
+.container__search__form {
+  padding: 20px;
+  color: white;
+  opacity: 1;
+
+}
+
+.text-origin, .text-destination {
+    width: 400px;
+    height: 20px;
+    margin: 5px
+}
+
+.traveltype, .startdate, .returndate, .buttonsearch, .passengers{
+    width: 200px;
+    height: 25px;
+    margin: 15px;
+}
+
+.button-search{
+    background-color: #4CAF50;;
+    width: 300px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.button-search:hover{
+    background-color: darkgreen;
+}
+
+
+.container__result {
+  position: relative;
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 650px;
+  height: auto;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 0;
+}
